@@ -54,9 +54,11 @@
       </symbol>
     </svg>
 
-    <div class="promo-bar" role="note">
-      Frete gratis acima de R$299 <span></span> Troca facil em 30 dias <span></span>
-      Materiais de menor impacto
+    <div class="promo-bar" role="note" data-promo-carousel>
+      <p class="promo-message is-active">Aura veste o essencial com leveza, ritmo e consciencia.</p>
+      <p class="promo-message">Frete gratis acima de R$299.</p>
+      <p class="promo-message">Troca facil em 30 dias.</p>
+      <p class="promo-message">Materiais de menor impacto para escolhas mais duradouras.</p>
     </div>
 
     <header class="site-header" data-header>
@@ -141,27 +143,39 @@
 
       <section class="section categories reveal" id="novidades" aria-labelledby="categories-title">
         <p class="eyebrow" id="categories-title">Descubra por categorias</p>
-        <div class="category-grid">
-          <!-- Altere imagens e textos dos cards aqui. As URLs vieram do Figma. -->
-          <a class="image-card" href="#roupas">
-            <img src="./assets/category-01.webp" alt="Look minimalista em tons claros" />
-            <span>Camisas</span>
-          </a>
-          <a class="image-card" href="#roupas">
-            <img src="./assets/category-02.webp" alt="Colete claro com bermuda preta" />
-            <span>Coletes</span>
-          </a>
-          <a class="image-card" href="#acessorios">
-            <img src="./assets/category-03.webp" alt="Vestido amarelo em fundo claro" />
-            <span>Sandalias</span>
-          </a>
-          <a class="image-card" href="#sale">
-            <img src="./assets/category-04.webp" alt="Look branco e preto visto de costas" />
-            <span>Shorts</span>
-          </a>
-          <a class="category-next" href="#trends-title" aria-label="Ver proximas categorias">
+        <div class="category-grid" data-category-carousel>
+          <div class="category-viewport">
+            <div class="category-track" data-category-track>
+              <!-- Altere imagens e textos dos cards aqui. As URLs vieram do Figma. -->
+              <a class="image-card" href="#roupas">
+                <img src="./assets/category-01.webp" alt="Look minimalista em tons claros" />
+                <span>Camisas</span>
+              </a>
+              <a class="image-card" href="#roupas">
+                <img src="./assets/category-02.webp" alt="Colete claro com bermuda preta" />
+                <span>Coletes</span>
+              </a>
+              <a class="image-card" href="#acessorios">
+                <img src="./assets/category-03.webp" alt="Vestido amarelo em fundo claro" />
+                <span>Sandalias</span>
+              </a>
+              <a class="image-card" href="#sale">
+                <img src="./assets/category-04.webp" alt="Look branco e preto visto de costas" />
+                <span>Shorts</span>
+              </a>
+              <a class="image-card" href="#roupas">
+                <img src="./assets/product-02.webp" alt="Look escuro com calca ampla" />
+                <span>Calcas</span>
+              </a>
+              <a class="image-card" href="#sale">
+                <img src="./assets/product-05.webp" alt="Vestido amarelo leve" />
+                <span>Vestidos</span>
+              </a>
+            </div>
+          </div>
+          <button class="category-next" type="button" aria-label="Ver proximas categorias" data-category-next>
             <svg class="icon" aria-hidden="true"><use href="#icon-chevron-right"></use></svg>
-          </a>
+          </button>
         </div>
       </section>
 
@@ -182,7 +196,7 @@
       <section class="section products reveal" id="roupas" aria-labelledby="products-title">
         <div class="section-head">
           <p class="eyebrow" id="products-title">Mais desejados da semana</p>
-          <a class="text-link" href="#sale">Ver mais</a>
+          <a class="text-link products-more" href="#sale"><span>Ver mais</span></a>
         </div>
         <div class="product-grid">
           <article class="product-card">
@@ -273,22 +287,34 @@
 
       <section class="section testimonials reveal" aria-labelledby="testimonials-title">
         <p class="eyebrow" id="testimonials-title">O que dizem sobre a Aura</p>
-        <div class="testimonial-grid">
-          <blockquote>
-            <p>"A modelagem veste bem sem parecer basica. Consigo usar no trabalho e sair depois."</p>
-            <cite>Marina, 27</cite>
-          </blockquote>
-          <blockquote>
-            <p>"Gostei de comprar por tamanho direto na vitrine. Rapido e sem friccao."</p>
-            <cite>Lia, 32</cite>
-          </blockquote>
-          <blockquote>
-            <p>"A comunicacao de sustentabilidade e clara, sem ficar panfletaria."</p>
-            <cite>Bianca, 23</cite>
-          </blockquote>
-          <a class="category-next testimonial-next" href="#newsletter-title" aria-label="Ver proximos depoimentos">
+        <div class="testimonial-grid" data-testimonial-carousel>
+          <div class="testimonial-viewport">
+            <div class="testimonial-track" data-testimonial-track>
+              <blockquote>
+                <p>"A modelagem veste bem sem parecer basica. Consigo usar no trabalho e sair depois."</p>
+                <cite>Marina, 27</cite>
+              </blockquote>
+              <blockquote>
+                <p>"Gostei de comprar por tamanho direto na vitrine. Rapido e sem friccao."</p>
+                <cite>Lia, 32</cite>
+              </blockquote>
+              <blockquote>
+                <p>"A comunicacao de sustentabilidade e clara, sem ficar panfletaria."</p>
+                <cite>Bianca, 23</cite>
+              </blockquote>
+              <blockquote>
+                <p>"As pecas chegam com acabamento impecavel e combinam com tudo que ja tenho."</p>
+                <cite>Clara, 29</cite>
+              </blockquote>
+              <blockquote>
+                <p>"A experiencia e silenciosa, elegante e direta. Parece uma curadoria feita para mim."</p>
+                <cite>Renata, 35</cite>
+              </blockquote>
+            </div>
+          </div>
+          <button class="category-next testimonial-next" type="button" aria-label="Ver proximos depoimentos" data-testimonial-next>
             <svg class="icon" aria-hidden="true"><use href="#icon-chevron-right"></use></svg>
-          </a>
+          </button>
         </div>
       </section>
 

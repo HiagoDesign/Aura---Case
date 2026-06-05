@@ -100,6 +100,28 @@ if (categoryCarousel && categoryTrack && categoryNext) {
     updateCategoryCarousel();
   });
 
+  const syncCategoryProximity = (event) => {
+    const proximity = 56;
+    const cards = Array.from(categoryTrack.querySelectorAll(".image-card"));
+
+    cards.forEach((card) => {
+      const rect = card.getBoundingClientRect();
+      const dx = Math.max(rect.left - event.clientX, 0, event.clientX - rect.right);
+      const dy = Math.max(rect.top - event.clientY, 0, event.clientY - rect.bottom);
+      const distance = Math.hypot(dx, dy);
+
+      card.classList.toggle("is-near", distance <= proximity);
+    });
+  };
+
+  categoryCarousel.addEventListener("mousemove", syncCategoryProximity);
+
+  categoryCarousel.addEventListener("mouseleave", () => {
+    categoryTrack.querySelectorAll(".image-card.is-near").forEach((card) => {
+      card.classList.remove("is-near");
+    });
+  });
+
   categoryTrack.addEventListener("transitionend", () => {
     const { originalCount } = getCategoryMetrics();
 

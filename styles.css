@@ -285,10 +285,6 @@ button {
   width: clamp(366px, 25.42vw, 448px);
 }
 
-.mobile-search {
-  display: none;
-}
-
 .search-field input {
   width: 168px;
   padding: 0 0 13px;
@@ -438,6 +434,7 @@ button {
 
 .hero-panel:hover img,
 .image-card:hover img,
+.image-card.is-near img,
 .trend-card:hover img,
 .product-card:hover .product-image-primary,
 .editorial:hover .editorial-media img {
@@ -724,6 +721,8 @@ button {
 
 .image-card:hover::after,
 .image-card:hover span,
+.image-card.is-near::after,
+.image-card.is-near span,
 .trend-card:hover span {
   opacity: 1;
   transform: translateY(0);
@@ -1536,10 +1535,6 @@ blockquote cite {
     width: 96px;
     justify-content: flex-end;
     transform: translateY(-50%);
-  }
-
-  .mobile-search {
-    display: grid;
   }
 
   .header-actions .icon-button[aria-label="Conta"] {
